@@ -12,6 +12,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `npm install`
+
+### `npm install react-router-dom`
+
+### `npm install node-sass`
+
+### `npm install redux react-redux`
+
+### `npm install --save react-id-swiper@latest swiper@latest`
+
+### `npm install react-bootstrap`
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />

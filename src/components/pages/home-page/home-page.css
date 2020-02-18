@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container__wrapper {
+  padding-left: 70px;
+  padding-right: 70px;
+  height: 100%;
+}
+
+/* header */
+.homepage__header {
+  height: 70px;
+  background: #fff;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.homepage__header-text {
+  position: absolute;
+  width: 153px;
+  height: 20px;
+  left: 70px;
+  top: 25px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323232;
+}
+/* end header */
+
+/* section gallery */
+.gallery {
+  display: flex;
+}
+.gallery__wrapper {
+  margin-top: 40px;
+}
+
+.gallery__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery__inner-title {
+  height: 39px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #323232;
+  margin-bottom: 24px;
+  justify-content: start;
+  width: 100%;
+}
+
+.gallery__inner-slider {
+  margin-top: 100px;
+  margin-bottom: 96px;
+  width: 1140px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+/* end section gallery*/
+
+/* section about */
+.about {
+  display: flex;
+}
+
+.about__inner {
+}
+
+.about__inner-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #323232;
+}
+
+.about__inner-content {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+}
+/* end section about */
+
+/* section contact */
+.contact {
+}
+
+.contact__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #323232;
+}
+
+.contact__forms-col {
+}
+
+.contact-textarea {
+  position: relative;
+  left: 67%;
+  top: -170px;
+  width: 100%;
+  height: 143px;
+}
+
+.contact__forms-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #323232;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+/* end section contact */
