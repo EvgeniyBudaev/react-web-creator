@@ -22,23 +22,23 @@ html {
 
 /* header */
 .homepage__header {
+  padding-left: 70px;
+  padding-right: 70px;
   height: 70px;
   background: #fff;
   box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
 }
 
 .homepage__header-text {
-  position: absolute;
-  width: 153px;
-  height: 20px;
-  left: 70px;
-  top: 25px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: #323232;
+  width: 100%;
 }
 /* end header */
 
@@ -51,8 +51,7 @@ html {
 }
 
 .gallery__inner {
-  display: flex;
-  justify-content: center;
+  
 }
 
 .gallery__inner-title {
@@ -64,8 +63,11 @@ html {
   line-height: 39px;
   color: #323232;
   margin-bottom: 24px;
-  justify-content: start;
-  width: 100%;
+}
+
+.gallery__wrapper-slider {
+  display: flex;
+  justify-content: center;
 }
 
 .gallery__inner-slider {
@@ -73,8 +75,10 @@ html {
   margin-bottom: 96px;
   width: 1140px;
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
+}
+
+.swiper-container {
+
 }
 /* end section gallery*/
 
@@ -107,6 +111,7 @@ html {
 
 /* section contact */
 .contact {
+  margin-top: 20px;
 }
 
 .contact__title {
@@ -118,7 +123,8 @@ html {
   color: #323232;
 }
 
-.contact__forms-col {
+.contact__forms {
+  height: 200px;
 }
 
 .contact-textarea {
@@ -139,4 +145,147 @@ html {
   margin-top: 24px;
   margin-bottom: 8px;
 }
+
+.contact__politics {
+  width: 100%;
+}
+
+.contact__politics-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #323232;
+}
+
+.contact__politics-greentext {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  color: #93E08C;
+}
+  /* checkbox */
+.checkbox {
+  border: 1px solid #C9C9C9;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .15em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #93E08C;
+  transition: all .2s;
+  font-family: Montserrat;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+  /* end checkbox */
+
+  /* button */
+.contact__button-send {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact__btn-container {
+  border: none;
+}
+
+.btn-container {
+  display: inline-block;
+}
+
+.contact__btn-container .btn {
+  display: inline-block;
+  letter-spacing: 5px;
+  color: #323232;
+  background-color: #231f20;
+  border-radius: 3px;
+  padding: 12px 24px;
+  background: linear-gradient(270deg, #93E08C, #78CEBF, #78CEBF, #93E08C);
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  border: none;
+  border: 1px solid rgba(223,190,106,0.3);
+  transition: all 0.7s ease-in-out;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.contact__btn-container .btn:hover {
+  color: #323232;
+  border: 1px solid rgba(223,190,106,0);
+  background-position: 99% 50%;
+}
+  /* end button */
 /* end section contact */
+
+/* footer */
+.footer {
+width: 100%;
+height: 200px;   
+background: #323232;
+margin-top: 64px;
+}
+/* end footer */

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Swiper from "react-id-swiper";
-import "swiper/css/swiper.css";
+import 'swiper/css/swiper.css';
+import 'swiper/swiper.scss';
 import "./slider.css";
 import "./slider.module.scss";
 import img1 from "../slider/img1.jpg";
@@ -9,7 +10,11 @@ import img3 from "../slider/img3.jpg";
 
 const Slider = () => {
   const params = {
-    pagination: ".swiper-pagination",
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
     slidesPerView: 3,
     paginationClickable: true,
     spaceBetween: 30,

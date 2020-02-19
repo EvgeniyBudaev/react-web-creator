@@ -3,5 +3,17 @@
   height: 243px;
   border-radius: 5px;
 }
+.swiper-pagination-bullet-active {
+background: linear-gradient(91.83deg, #93E08C -1.93%, #78CEBF 97.03%);
+}
 
+.swiper-button-prev,
+.swiper-button-next {
+
+}
+
+.swiper-button-prev:after,
+.swiper-button-prev:after {
+
+}
 

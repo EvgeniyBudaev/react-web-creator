@@ -2,24 +2,50 @@ import React, { Component } from "react";
 import "./home-page.css";
 import Slider from "./slider";
 import Form from "react-bootstrap/Form";
+import GithubService from '../../../services/github-service';
 class HomePage extends Component {
-  render() {
+  githubService = new GithubService();
+  state = {
+    metadata : null
+  };
+  componentDidMount() {
+    this.githubService
+    .getAll()
+    .then(data => {
+      const { components } = data;
+      const  [metadata] = components;
+      this.setState({
+        metadata 
+      })
+    })
+  }
+
+render() {
+  // const { data } = this.state;
+  const  {metadata} = this.state;
+  console.log(metadata);
+
     return (
+      
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            <header className="homepage__header">
-              <span className="homepage__header-text">Тестовое задание</span>
-            </header>
 
+          <div className="col-md-12">
+            <div className="homepage__header">
+              <div className="homepage__header-text">Тестовое задание</div>
+            </div>
+          </div>
+       
             <div className="container__wrapper">
               <section className="gallery">
                 <div className="col-md-12">
                   <div className="gallery__wrapper">
                     <div className="gallery__inner">
                       <div className="gallery__inner-title">Галерея</div>
+                      <div className="gallery__wrapper-slider">
                       <div className="gallery__inner-slider">
                         <Slider />
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -99,9 +125,10 @@ class HomePage extends Component {
                             </div>
                           </Form.Row>
 
+
                           <Form.Row>
                             <div className="col-md-4">
-                              <Col-md-4 className="contact__forms-col">
+                              <Col-md-4 className="contact__forms-col ">
                                 <div className="contact__forms-title">
                                   E-mail
                                 </div>
@@ -117,6 +144,7 @@ class HomePage extends Component {
                               </Col-md-4>
                             </div>
                           </Form.Row>
+                          
 
                           <div className="contact-textarea">
                             <div className="col-md-4">
@@ -124,20 +152,43 @@ class HomePage extends Component {
                                 Комментарий (не обязательно)
                               </div>
                               <textarea
-                                class="form-control"
+                                className="form-control"
                                 id="exampleFormControlTextarea1"
-                                rows="3"
+                                rows="5.0"
                               ></textarea>
                             </div>
                           </div>
                         </Form>
                       </div>
+
+                      <div className="contact__politics">
+                        <div>
+                         <input type="checkbox" id="test1" />
+                          <label htmlFor="test1">
+                            <span className="contact__politics-text">Я даю согласие на обработку персональных данных согласно</span>
+                            <span className="contact__politics-greentext"> политике конфиденциальности.</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div className="contact__button-send">
+                        <div className="contact__btn-container">
+                          <div className="btn-container">
+                             <a href="#" className="btn" target="blank">
+                                Отправить заявку 
+                             </a>
+                          </div>
+                          </div>  
+                      </div>
+
                     </div>
                   </div>
                 </div>
-              </section>
+              </section>          
             </div>
-          </div>
+
+            <section className="footer"></section>
+          
         </div>
       </div>
     );
