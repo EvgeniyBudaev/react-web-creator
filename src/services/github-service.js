@@ -16,9 +16,5 @@ export default class GithubService {
     return res;
   };
 
-  // getComponents() {
-  //   return new Promise(resolve) => {
-    //resolve(this.data)
-  // }
-  // }
+  
 }
