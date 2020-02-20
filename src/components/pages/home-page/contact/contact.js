@@ -11,8 +11,8 @@ class Contact extends Component {
 
     githubService.getAll().then(data => {
       const { form } = data;
-      let formTitle = form.title;
-      let submitButtonText = form.submit_button.text;
+      const formTitle = form.title;
+      const submitButtonText = form.submit_button.text;
       console.log(formTitle, submitButtonText);
       this.props.formTitleLoaded(formTitle);
       this.props.submitButtonTextLoaded(submitButtonText);

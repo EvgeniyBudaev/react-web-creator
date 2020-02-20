@@ -1,7 +1,6 @@
 const initialState = {
   form: null,
   formTitle: null,
-  formFields: null,
   submitButtonText: null
 };
 
