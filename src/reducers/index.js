@@ -1,10 +1,15 @@
 const initialState = {
-  form: null,
-  formTitle: null,
-  submitButtonText: null
+  formTitle: '',
+  submitButtonText: '',
+  formFieldsLabelName: '',
+  formFieldsLabelPhoneNumber: '',
+  formFieldsLabelEmail: '',
+  formFieldsLabelRecord: '',
+  formFieldsLabelPolitic: ''
 };
 
 const reducer = (state = initialState, action) => {
+
   switch (action.type) {
     case "FORM_TITLE_LOADED":
       return {
@@ -12,8 +17,37 @@ const reducer = (state = initialState, action) => {
       };
     case "FORM_SUBMIT_BUTTON_TEXT_LOADED":
       return {
+        ...state,
         submitButtonText: action.payload
       };
+    case "FORM_FIELDS_LABEL_NAME_LOADED":
+      return {
+        ...state,
+        formFieldsLabelName: action.payload
+      };  
+    case "FORM_FIELDS_LABEL_PHONE_NUMBER_LOADED":
+      return {
+        ...state,
+        formFieldsLabelPhoneNumber: action.payload
+      };  
+    case "FORM_FIELDS_LABEL_EMAIL_LOADED":
+      return {
+         ...state,
+         formFieldsLabelEmail: action.payload
+       }; 
+    case "FORM_FIELDS_LABEL_RECORD_LOADED":
+      return {
+          ...state,
+          formFieldsLabelRecord: action.payload
+       }; 
+    case "FORM_FIELDS_LABEL_POLITIC_LOADED":
+      return {
+           ...state,
+           formFieldsLabelPolitic: action.payload
+       };  
+           
+        
+      
 
 
     default:

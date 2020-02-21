@@ -15,7 +15,5 @@ export default class GithubService {
     const res = await this.getResource(`/page.json`);
     return res;
   };
-
-
-
-}
+   
+};
