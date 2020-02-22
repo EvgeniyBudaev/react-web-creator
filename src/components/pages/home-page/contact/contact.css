@@ -3,27 +3,6 @@
   margin-top: 20px;
 }
 
-.contact__politics {
-  width: 100%;
-}
-
-.contact__politics-text {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 140%;
-  color: #323232;
-}
-
-.contact__politics-greentext {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 140%;
-  color: #93E08C;
-}
   /* checkbox */
 .checkbox {
   border: 1px solid #C9C9C9;

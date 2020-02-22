@@ -1,11 +1,12 @@
 const initialState = {
-  formTitle: '',
-  submitButtonText: '',
-  formFieldsLabelName: '',
-  formFieldsLabelPhoneNumber: '',
-  formFieldsLabelEmail: '',
-  formFieldsLabelRecord: '',
-  formFieldsLabelPolitic: ''
+  formTitle: "",
+  submitButtonText: "",
+  formFieldsLabelName: "",
+  formFieldsLabelPhoneNumber: "",
+  formFieldsLabelEmail: "",
+  formFieldsLabelRecord: "",
+  formFieldsLabelPolitic: "",
+  formFieldsLabelComment: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -24,31 +25,32 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         formFieldsLabelName: action.payload
-      };  
+      };
     case "FORM_FIELDS_LABEL_PHONE_NUMBER_LOADED":
       return {
         ...state,
         formFieldsLabelPhoneNumber: action.payload
-      };  
+      };
     case "FORM_FIELDS_LABEL_EMAIL_LOADED":
       return {
-         ...state,
-         formFieldsLabelEmail: action.payload
-       }; 
+        ...state,
+        formFieldsLabelEmail: action.payload
+      };
     case "FORM_FIELDS_LABEL_RECORD_LOADED":
       return {
-          ...state,
-          formFieldsLabelRecord: action.payload
-       }; 
+        ...state,
+        formFieldsLabelRecord: action.payload
+      };
     case "FORM_FIELDS_LABEL_POLITIC_LOADED":
       return {
-           ...state,
-           formFieldsLabelPolitic: action.payload
-       };  
-           
-        
-      
-
+        ...state,
+        formFieldsLabelPolitic: action.payload
+      };
+    case "FORM_FIELDS_LABEL_COMMENT_LOADED":
+      return {
+        ...state,
+        formFieldsLabelComment: action.payload
+      };
 
     default:
       return state;

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import './form-politic.css';
+import "./form-politic.css";
 
-import { formFieldsLabelPoliticLoaded} from '../../../../../../actions';
-import { withGithubService } from '../../../../../hoc';
+import { formFieldsLabelPoliticLoaded } from "../../../../../../actions";
+import { withGithubService } from "../../../../../hoc";
 
 class FormPolitic extends Component {
   componentDidMount() {
@@ -12,30 +12,31 @@ class FormPolitic extends Component {
 
     githubService.getAll().then(data => {
       const { form } = data;
-      let formFieldsLabelPolitic = form.fields[4].label;
+      let formFieldsLabelPolitic = form.fields[5].label;
       this.props.formFieldsLabelPoliticLoaded(formFieldsLabelPolitic);
     });
   }
 
-  
   render() {
     const { formFieldsLabelPolitic } = this.props;
     return (
-      <div className="contact-textarea">
-      <div className="col-md-4">
-        <div className="contact__forms-title">
-         { formFieldsLabelPolitic }
+      <div className="contact__politics">
+        <div>
+          <input type="checkbox" id="test1" />
+          <label htmlFor="test1">
+            <span className="contact__politics-text">
+              {formFieldsLabelPolitic}
+            </span>
+            <span className="contact__politics-greentext">
+              {" "}
+              {/* политике конфиденциальности. */}
+            </span>
+          </label>
         </div>
-        <textarea
-          className="form-control"
-          id="exampleFormControlTextarea1"
-          rows="5.0"
-        ></textarea>
       </div>
-    </div>
-    )
-  };
-};
+    );
+  }
+}
 
 const mapStateToProps = ({ formFieldsLabelPolitic }) => {
   return {
@@ -50,4 +51,3 @@ const mapDispatchToProps = {
 export default withGithubService()(
   connect(mapStateToProps, mapDispatchToProps)(FormPolitic)
 );
-

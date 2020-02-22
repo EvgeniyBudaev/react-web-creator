@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+
+Дан JSON, полученный с сервера, с данными для веб-страницы. На основе этого JSON-а реализована (Bootstrap) верстка страницы на React (иначе говоря, использован JSON, как источник данных о странице).
+
+Ссылка на github gist: https://gist.github.com/alexandrov-va/7f353ca822d074d7ce22d3af3d13696f
+
+![Image alt](https://github.com/EvgeniyBudaev/react-web-creator/raw/master/public/images/readme1.jpg)
 
 ## Available Scripts
 

@@ -47,12 +47,21 @@ const formFieldsLabelPoliticLoaded = formFieldsLabelPolitic => {
   };
 };
 
+const formFieldsLabelCommentLoaded = formFieldsLabelComment => {
+  return {
+    type: "FORM_FIELDS_LABEL_COMMENT_LOADED",
+    payload: formFieldsLabelComment
+  };
+};
 
-export { 
+
+export {
   formTitleLoaded,
-   submitButtonTextLoaded,
-    formFieldsLabelNameLoaded,
-    formFieldsLabelPhoneNumberLoaded,
-    formFieldsLabelEmailLoaded,
-    formFieldsLabelRecordLoaded,
-    formFieldsLabelPoliticLoaded };
+  submitButtonTextLoaded,
+  formFieldsLabelNameLoaded,
+  formFieldsLabelPhoneNumberLoaded,
+  formFieldsLabelEmailLoaded,
+  formFieldsLabelRecordLoaded,
+  formFieldsLabelPoliticLoaded,
+  formFieldsLabelCommentLoaded
+};
